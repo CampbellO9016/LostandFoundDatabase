@@ -1,9 +1,9 @@
-#Lost and Found Database
+# Lost and Found Database
 The purpose of this database is to help return lost items to people, and to limit the amount of lost items that get thrown out or donated. 
 This will help people find their belongings and get them returned in a structured manor.
 
 
-###Use Cases
+### Use Cases
 * As a student, I need to be able to fill out a form of the thing that I lost
 * As an Admin, I need to review all of the lost item requests
 * As an Admin, I need to be able to deny or accept a lost request
@@ -11,7 +11,7 @@ This will help people find their belongings and get them returned in a structure
 * As an Admin, I need to be able to sort by date
 * AS an Admin, I need to be able to update items
 
-###Business Rules
+### Business Rules
 * Date requested cannot be before date lost (can be the same) 
 * Progress is selected from not returned, pending return, returned 
 * Every user is either a student or an admin
@@ -19,6 +19,7 @@ This will help people find their belongings and get them returned in a structure
 
 
 
+```mermaid
 erDiagram
     items ||--|| found_items : "is identified as"
 
@@ -45,3 +46,4 @@ erDiagram
         date date_found
         varchar progress "CHECK constraint"
     }
+```
